@@ -3,9 +3,13 @@ import { View, Text, StyleSheet, TouchableOpacity, ScrollView, Alert, ActivityIn
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Ionicons } from '@expo/vector-icons';
+<<<<<<< HEAD:frontend/src/screens/WalletScreen.tsx
 import { useFocusEffect } from '@react-navigation/native';
 import * as walletService from '../services/walletService';
 import * as cardService from '../services/cardService';
+=======
+import * as walletService from '../../services/walletService';
+>>>>>>> 5978ee36 (restructuring of the whole project):frontend/src/screens/home/WalletScreen.tsx
 
 export default function WalletScreen({ navigation }: any) {
     const [wallet, setWallet] = useState<any>(null);

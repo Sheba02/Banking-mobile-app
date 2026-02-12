@@ -1,10 +1,10 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Ionicons } from '@expo/vector-icons';
-import DashboardScreen from '../screens/DashboardScreen';
-import PaymentsScreen from '../screens/PaymentsScreen';
-import TransactionsScreen from '../screens/TransactionsScreen';
-import WalletScreen from '../screens/WalletScreen';
+import DashboardScreen from '../screens/home/DashboardScreen';
+import PaymentsScreen from '../screens/payments/PaymentsScreen';
+import TransactionsScreen from '../screens/home/TransactionsScreen';
+import WalletScreen from '../screens/home/WalletScreen';
 import ProfileStackNavigation from './ProfileStackNavigation';
 
 const Tab = createBottomTabNavigator();

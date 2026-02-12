@@ -5,10 +5,14 @@ import {
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
+<<<<<<< HEAD:frontend/src/screens/FundTransferScreen.tsx
 import { Picker } from '@react-native-picker/picker';
 import { useFocusEffect } from '@react-navigation/native';
 import * as transactionService from '../services/transactionService';
 import * as cardService from '../services/cardService';
+=======
+import * as transactionService from '../../services/transactionService';
+>>>>>>> 5978ee36 (restructuring of the whole project):frontend/src/screens/transfer/FundTransferScreen.tsx
 
 const { width } = Dimensions.get('window');
 

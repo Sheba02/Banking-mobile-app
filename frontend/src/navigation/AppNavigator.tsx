@@ -1,21 +1,21 @@
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer } from "@react-navigation/native";
-import RegistrationScreen from "../screens/RegistrationScreen";
-import LoginScreen from "../screens/LoginScreen";
-import SplashScreen from "../screens/SplashScreen";
+import RegistrationScreen from "../screens/auth/RegistrationScreen";
+import LoginScreen from "../screens/auth/LoginScreen";
+import OTPVerificationScreen from "../screens/auth/OTPVerificationScreen";
+import SplashScreen from "../screens/common/SplashScreen";
 import TabNavigator from "./TabNavigator";
-import FundTransferScreen from "../screens/FundTransferScreen";
-import TransactionsScreen from "../screens/TransactionsScreen";
-import AddCardScreen from "../screens/AddCardScreen";
-import CardDetailsScreen from "../screens/CardDetailsScreen";
-import OTPVerificationScreen from "../screens/OTPVerificationScreen";
-import NotificationScreen from "../screens/NotificationScreen";
-import DepositScreen from "../screens/DepositScreen";
-import WithdrawScreen from "../screens/WithdrawScreen";
-import CardManagementScreen from "../screens/CardManagementScreen";
-import InternetPaymentScreen from "../screens/InternetPaymentScreen";
-import InternetPaymentSummaryScreen from "../screens/InternetPaymentSummaryScreen";
+import FundTransferScreen from "../screens/transfer/FundTransferScreen";
+import DepositScreen from "../screens/transfer/DepositScreen";
+import WithdrawScreen from "../screens/transfer/WithdrawScreen";
+import TransactionsScreen from "../screens/home/TransactionsScreen";
+import AddCardScreen from "../screens/cards/AddCardScreen";
+import CardDetailsScreen from "../screens/cards/CardDetailsScreen";
+import CardManagementScreen from "../screens/cards/CardManagementScreen";
+import NotificationScreen from "../screens/common/NotificationScreen";
+import InternetPaymentScreen from "../screens/payments/InternetPaymentScreen";
+import InternetPaymentSummaryScreen from "../screens/payments/InternetPaymentSummaryScreen";
 
 const Stack = createStackNavigator();
 
