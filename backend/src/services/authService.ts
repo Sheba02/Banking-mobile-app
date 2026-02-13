@@ -105,13 +105,8 @@ export const loginUser = async (loginData: any) => {
         $or: [{ email: identifier }, { phoneNumber: identifier }]
     });
 
-    if (!user) {
+    if (!user || !user.passwordHash) {
         throw new Error('Invalid email or password');
-    }
-
-    // Check if user has a password hash (account might be corrupted)
-    if (!user.passwordHash) {
-        throw new Error('Account is incomplete. Please register again or contact support.');
     }
 
     // Verify password
@@ -144,19 +139,13 @@ export const loginUser = async (loginData: any) => {
         });
 
     // Return immediately with OTP info
-    const response: any = {
+    return {
         _id: user._id.toString(),
         email: user.email,
-        message: 'OTP sent to your email. Please check spam folder if not received.',
+        otp: otp, // Always return OTP for testing
+        message: 'OTP generated successfully. Check console or use the OTP provided.',
         success: true,
     };
-
-    // Add test OTP in development mode only
-    if (process.env.NODE_ENV !== 'production') {
-        response.testOtp = otp; // For local testing only
-    }
-
-    return response;
 };
 
 // Verify Login OTP and get token

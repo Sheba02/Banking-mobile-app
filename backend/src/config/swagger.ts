@@ -3,7 +3,7 @@ import swaggerUi from 'swagger-ui-express';
 
 const options = {
     definition: {
-        openapi:'3.0.0',
+        openapi: '3.0.0',
         info: {
             title: 'Nexpay Banking API',
             version: '1.0.0',
@@ -12,13 +12,12 @@ const options = {
                 name: 'Nexpay Team',
             },
         },
-servers: [
-    {
-        url: process.env.BASE_URL || 'http://localhost:5000',
-        // url: process.env.BASE_URL || 'https://banking-mobile-app.onrender.com',
-        description: 'API server',
-    },
-],
+        servers: [
+            {
+                url: process.env.BASE_URL || 'http://localhost:5000',
+                description: 'API server',
+            },
+        ],
         components: {
             securitySchemes: {
                 bearerAuth: {
@@ -29,7 +28,7 @@ servers: [
             },
         },
     },
-    apis: ['./src/routes/*.ts'], // Path to the API routes
+    apis: ['./src/routes/*.ts'],
 };
 
 const swaggerSpec = swaggerJsdoc(options);

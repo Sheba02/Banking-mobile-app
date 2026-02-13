@@ -37,6 +37,6 @@ export const protect = async (req: AuthRequest, res: Response, next: NextFunctio
     }
 
     if (!token) {
-        res.status(401).json({ message: 'Not authorized, no token' });
+        return res.status(401).json({ message: 'Not authorized, no token' });
     }
 };

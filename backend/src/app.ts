@@ -1,5 +1,4 @@
 import express, { Express, Request, Response } from 'express';
-import { sendLoginOtp, sendTransactionEmail } from './services/notification.service';
 import { testEmailConnection } from './services/email.service';
 import cors from 'cors';
 
@@ -95,12 +94,14 @@ import walletRoutes from './routes/walletRoutes';
 import transactionRoutes from './routes/transactionRoutes';
 import cardRoutes from './routes/cardRoutes';
 import inAppNotificationRoutes from './routes/inAppNotificationRoutes';
+import notificationRoutes from './routes/notification.routes';
 
 app.use('/api/auth', authRoutes);
 app.use('/api/wallet', walletRoutes);
 app.use('/api/transactions', transactionRoutes);
 app.use('/api/cards', cardRoutes);
 app.use('/api/notifications', inAppNotificationRoutes);
+app.use('/api/notify', notificationRoutes);
 
 
 export { app };
